@@ -7,7 +7,13 @@ const Results = props => {
       <div className={props.drinkArray ? "cardList" : "cardListNull"}>
         {props.drinkArray &&
           props.drinkArray.map(x => (
-            <Card strDrink={x.strDrink} strDrinkThumb={x.strDrinkThumb} />
+            <Card
+              strDrink={x.strDrink}
+              strDrinkThumb={x.strDrinkThumb}
+              idDrink={x.idDrink}
+              selectDrink={props.selectDrink}
+              key={x.idDrink}
+            />
           ))}
       </div>
     </div>
