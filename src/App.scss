@@ -1,0 +1,140 @@
+.app {
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "search results drink";
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
+.cardList {
+  visibility: visible;
+}
+
+.search {
+  grid-area: search;
+  z-index: 300;
+  color: white;
+  text-align: center;
+  vertical-align: center;
+  background-position: center;
+  background-image: url("./images/drink-black.jpg");
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  max-width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-areas: "." "searchForm" ".";
+}
+.searchForm {
+  grid-area: searchForm;
+  display: grid;
+  grid-template-areas: "searchInput" "searchButton";
+}
+.searchHeader {
+  grid-area: searchHeader;
+}
+.searchInput {
+  grid-area: searchInput;
+  font-size: 2rem;
+  padding-top: 25%;
+  text-align: center;
+  color: white;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.searchButton {
+  grid-area: searchButton;
+  color: white;
+  font-size: 1.9rem;
+  margin-left: 30%;
+  margin-right: 30%;
+  max-height: 30%;
+  background: none;
+  outline: none;
+  opacity: 0.2;
+  border: none;
+}
+.results {
+  grid-area: results;
+  background-image: url("./images/dark-wood.jpg");
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 10%;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.resultsHeader {
+  color: white;
+  font-size: 3rem;
+}
+.card {
+  display: grid;
+  background-color: white;
+  border-radius: 5px 5px 5px 5px;
+  grid-template-areas: "cardHeader" "cardImg";
+  margin-bottom: 3%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.card:hover {
+  cursor: pointer;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transform: scale(1.02);
+}
+.cardHeader {
+  color: Black;
+  padding-left: 3%;
+  padding-top: 1%;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.cardImg {
+  grid-area: cardImg;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 0px 0px 4px 4px;
+}
+
+.drink {
+  grid-area: drink;
+  background-image: url("./images/nightjar-cocktail-week-london.jpg");
+  background-position: center;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". drinkBody .";
+}
+.drinkBody {
+  grid-area: drinkBody;
+  margin-top: 5%;
+  margin-bottom: auto;
+  border-radius: 15px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  background-color: rgb(20, 23, 31);
+}
+
+.drinkHeader {
+  grid-area: drinkHeader;
+  padding: 2%;
+  font-weight: bolder;
+  font-size: 3rem;
+}
+
+.drinkDirections {
+  grid-area: drinkDirections;
+  padding: 3%;
+}
+
+.drinkIngredients {
+  grid-area: drinkIngredients;
+}
