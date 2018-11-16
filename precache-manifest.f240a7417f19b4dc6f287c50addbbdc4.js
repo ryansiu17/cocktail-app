@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/cocktail-app/static/css/main.ece9c0a2.chunk.css"
   },
   {
-    "revision": "77ae6063dc71163d3687436e2e62144c",
+    "revision": "f5555827ff17c7a9596527afceed0942",
     "url": "/cocktail-app/index.html"
   }
 ];
