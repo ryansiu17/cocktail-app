@@ -7,6 +7,7 @@ import Drink from "./components/Drink";
 class App extends Component {
   state = {
     drinkArray: [],
+    ingredients: undefined,
     selectedDrink: undefined
   };
 
@@ -38,8 +39,30 @@ class App extends Component {
 
     console.log(data);
 
+    let ingredients = [];
+    let measures = [];
+    for (var x in data.drinks[0]) {
+      if (x.includes("strIngredient")) {
+        if (data.drinks[0][x] !== "" && data.drinks[0][x] !== null) {
+          ingredients.push(data.drinks[0][x]);
+        }
+      }
+    }
+    for (var y in data.drinks[0]) {
+      if (y.includes("strMeasure")) {
+        data.drinks[0][y] !== null && data.drinks[0][y].match(/[a-z]/i)
+          ? measures.push("- " + data.drinks[0][y])
+          : measures.push(" ");
+      }
+    }
+
+    const list = [];
+    for (var i = 0; i < ingredients.length; i++) {
+      list.push(ingredients[i] + " " + measures[i]);
+    }
     this.setState({
-      selectedDrink: data
+      selectedDrink: data,
+      ingredients: list
     });
   };
   render() {
@@ -50,7 +73,10 @@ class App extends Component {
           drinkArray={this.state.drinkArray}
           selectDrink={this.selectDrink}
         />
-        <Drink drink={this.state.selectedDrink} />
+        <Drink
+          drink={this.state.selectedDrink}
+          ingredients={this.state.ingredients}
+        />
       </div>
     );
   }
