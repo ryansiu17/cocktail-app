@@ -16,19 +16,19 @@ self.__precacheManifest = [
     "url": "/cocktail-app/static/js/runtime~main.5ff12cd5.js"
   },
   {
-    "revision": "8e6a41103aff33fed35e",
-    "url": "/cocktail-app/static/js/main.8e6a4110.chunk.js"
+    "revision": "f5b271c7236544afc337",
+    "url": "/cocktail-app/static/js/main.f5b271c7.chunk.js"
   },
   {
     "revision": "a463775321ad9a8bed36",
     "url": "/cocktail-app/static/js/1.a4637753.chunk.js"
   },
   {
-    "revision": "8e6a41103aff33fed35e",
+    "revision": "f5b271c7236544afc337",
     "url": "/cocktail-app/static/css/main.ece9c0a2.chunk.css"
   },
   {
-    "revision": "f5555827ff17c7a9596527afceed0942",
+    "revision": "6745e3e7a4845b45000a9355e63d7490",
     "url": "/cocktail-app/index.html"
   }
 ];

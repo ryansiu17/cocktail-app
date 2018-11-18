@@ -1,7 +1,7 @@
 {
   "main.css": "/cocktail-app/static/css/main.ece9c0a2.chunk.css",
-  "main.js": "/cocktail-app/static/js/main.8e6a4110.chunk.js",
-  "main.js.map": "/cocktail-app/static/js/main.8e6a4110.chunk.js.map",
+  "main.js": "/cocktail-app/static/js/main.f5b271c7.chunk.js",
+  "main.js.map": "/cocktail-app/static/js/main.f5b271c7.chunk.js.map",
   "static/js/1.a4637753.chunk.js": "/cocktail-app/static/js/1.a4637753.chunk.js",
   "static/js/1.a4637753.chunk.js.map": "/cocktail-app/static/js/1.a4637753.chunk.js.map",
   "runtime~main.js": "/cocktail-app/static/js/runtime~main.5ff12cd5.js",
@@ -9,6 +9,6 @@
   "static/css/main.ece9c0a2.chunk.css.map": "/cocktail-app/static/css/main.ece9c0a2.chunk.css.map",
   "static/media/App.scss": "/cocktail-app/static/media/nightjar-cocktail-week-london.e39e1f72.jpg",
   "index.html": "/cocktail-app/index.html",
-  "precache-manifest.f240a7417f19b4dc6f287c50addbbdc4.js": "/cocktail-app/precache-manifest.f240a7417f19b4dc6f287c50addbbdc4.js",
+  "precache-manifest.08874ed2fdee22cc1de636be484ee861.js": "/cocktail-app/precache-manifest.08874ed2fdee22cc1de636be484ee861.js",
   "service-worker.js": "/cocktail-app/service-worker.js"
 }
