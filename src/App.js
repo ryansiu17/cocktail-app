@@ -4,6 +4,8 @@ import Search from "./components/Search";
 import Results from "./components/Results";
 import Drink from "./components/Drink";
 
+// const uuidv4 = require("uuid/v4");
+
 class App extends Component {
   state = {
     drinkArray: [],
@@ -39,27 +41,27 @@ class App extends Component {
 
     console.log(data);
 
-    let ingredients = [];
-    let measures = [];
-    for (var x in data.drinks[0]) {
-      if (x.includes("strIngredient")) {
-        if (data.drinks[0][x] !== "" && data.drinks[0][x] !== null) {
-          ingredients.push(data.drinks[0][x]);
-        }
-      }
-    }
-    for (var y in data.drinks[0]) {
-      if (y.includes("strMeasure")) {
-        data.drinks[0][y] !== null && data.drinks[0][y].match(/[a-z]/i)
-          ? measures.push("- " + data.drinks[0][y])
-          : measures.push(" ");
-      }
-    }
+    const ingredients = Object.keys(data.drinks[0]).filter(property =>
+      property.startsWith("strIngredient")
+    );
 
-    const list = [];
-    for (var i = 0; i < ingredients.length; i++) {
-      list.push(ingredients[i] + " " + measures[i]);
-    }
+    const measures = Object.keys(data.drinks[0]).filter(property =>
+      property.startsWith("strMeasure")
+    );
+
+    const list = ingredients.map((each, i) => {
+      return {
+        key: Date.now() + i,
+        ingredient: data.drinks[0][ingredients[i]],
+        measure:
+          data.drinks[0][measures[i]] !== null &&
+          data.drinks[0][measures[i]].match(/[a-z0-9]/i)
+            ? " - " + data.drinks[0][measures[i]]
+            : null
+      };
+    });
+
+    console.log(list);
     this.setState({
       selectedDrink: data,
       ingredients: list

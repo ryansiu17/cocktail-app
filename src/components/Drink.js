@@ -11,7 +11,14 @@ const Drink = props => {
           <div className="drinkIngredients">
             <ul>
               {props.ingredients.map(x => {
-                return <li key={Date.now() + x}>{x}</li>;
+                return (
+                  x.ingredient && (
+                    <li key={x.key}>
+                      {x.ingredient}
+                      {x.measure}
+                    </li>
+                  )
+                );
               })}
             </ul>
           </div>
